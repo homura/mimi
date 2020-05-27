@@ -4,14 +4,14 @@
       <div class="field">
         <label class="label">Display</label>
         <div class="control">
-          <input v-model="display" class="input" type="text" placeholder="Display">
+          <input v-model="display" class="input" type="text" placeholder="display text">
         </div>
       </div>
 
       <div class="field">
         <label class="label">Secret</label>
         <div class="control">
-          <input v-model="secret" class="input" type="text" placeholder="Secret">
+          <input v-model="secret" class="input" type="text" placeholder="secret text">
         </div>
       </div>
 
@@ -26,7 +26,7 @@
       <div class="field">
         <label class="label">Encoded</label>
         <div class="control">
-          <input v-model="encoded" class="input" type="text" placeholder="Encoded">
+          <input v-model="encoded" class="input" type="text" placeholder="paste the encoded text here">
         </div>
       </div>
       <div class="field is-grouped">
@@ -40,7 +40,7 @@
           <textarea
             class="textarea"
             disabled
-            placeholder="Primary textarea"
+            placeholder="Decoded"
             v-model="decoded">
           </textarea>
         </div>
@@ -52,7 +52,7 @@
 <script lang="ts">
   import Vue from 'vue';
   import { copyTextToClipboard } from "./clipboard";
-  import { encode, decode } from './codec';
+  import { decode, encode } from './codec';
 
   export default Vue.extend({
     data() {
